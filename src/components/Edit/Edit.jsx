@@ -8,7 +8,7 @@ export default function Edit() {
 		<Tooltip title="Edit">
 			<IconButton>
 				<div className="contentIcon">
-					<EditIcon />
+					<EditIcon className='customIcon'/>
 				</div>
 			</IconButton>
 		</Tooltip>

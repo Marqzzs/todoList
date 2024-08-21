@@ -3,12 +3,12 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 
-export default function Delete() {
+export default function Delete({onClick}) {
 	return (
 		<Tooltip title="Delete">
-			<IconButton>
+			<IconButton onClick={onClick}>
 				<div className="contentIcon">
-					<DeleteIcon />
+					<DeleteIcon className='customIcon'/>
 				</div>
 			</IconButton>
 		</Tooltip>

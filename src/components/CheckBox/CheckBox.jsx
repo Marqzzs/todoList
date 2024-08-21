@@ -11,6 +11,12 @@ const CheckBox = () => {
 		<Checkbox
 			checked={checked}
 			onChange={handleChange}
+			sx={{
+				color: '#BDA4FF', // Cor peronalizada quando desmarcado
+				'&.Mui-checked': {
+					color: '#1E123B', // Cor personalizada quando marcado
+				},
+			}}
 			inputProps={{ 'aria-label': 'controlled' }}
 		/>
 	);
