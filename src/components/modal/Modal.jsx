@@ -24,32 +24,40 @@ const Modal = ({
 	};
 
 	return (
-		<div
-			style={{
-				position: 'fixed',
-				top: 0,
-				left: 0,
-				width: '100%',
-				height: '100%',
-				backgroundColor: 'rgba(135, 88, 255, 0.4)',
-				display: 'flex',
-				justifyContent: 'center',
-				alignItems: 'center',
-			}}
-		>
-			<div className="modalContent">
-				<h1 className="title">Descreva sua tarefa</h1>
-				<textarea
-					className="modalInput"
-					placeholder="Exemplo de Descrição"
-					onChange={handleTaskDescriptionChange}
-					value={taskDescription}
-				></textarea>
-				<button className="buttonModal" onClick={handleConfirmTask}>
-					{mode === 'add' ? 'Confirmar tarefa' : 'Salvar alterações'}
-				</button>
+		visible && (
+			<div
+				style={{
+					position: 'fixed',
+					top: 0,
+					left: 0,
+					width: '100%',
+					height: '100%',
+					backgroundColor: 'rgba(135, 88, 255, 0.4)',
+					display: 'flex',
+					justifyContent: 'center',
+					alignItems: 'center',
+				}}
+			>
+				<div className="modalContent">
+					<h1 className="title">
+						{mode === 'add'
+							? 'Descreva sua tarefa'
+							: 'Alterar tarefa'}
+					</h1>
+					<textarea
+						className="modalInput"
+						placeholder="Exemplo de Descrição"
+						onChange={handleTaskDescriptionChange}
+						value={taskDescription}
+					></textarea>
+					<button className="buttonModal" onClick={handleConfirmTask}>
+						{mode === 'add'
+							? 'Confirmar tarefa'
+							: 'Salvar alterações'}
+					</button>
+				</div>
 			</div>
-		</div>
+		)
 	);
 };
 

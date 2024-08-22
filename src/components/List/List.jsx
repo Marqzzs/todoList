@@ -3,7 +3,7 @@ import CheckBox from '../CheckBox/CheckBox';
 import Edit from '../Edit/Edit';
 import Delete from '../Delete/Delete';
 
-const List = ({ task, onDelete }) => {
+const List = ({ task, onDelete, onEdit }) => {
 	return (
 		<div className="contentList">
 			<div className="taskItem">
@@ -12,7 +12,7 @@ const List = ({ task, onDelete }) => {
 					<p className="description">{task.description}</p>
 				</div>
 				<div className="contentEdit">
-					<Edit />
+					<Edit onClick={onEdit} />
 					<Delete onClick={onDelete} />
 				</div>
 			</div>
